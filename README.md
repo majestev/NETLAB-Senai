@@ -17,12 +17,9 @@ npm run dev          # http://localhost:3000
 ```bash
 npm run typecheck
 npm run lint
-npm run test:unit    # matemática de redes, sem browser
-npm run test:e2e     # sobe o build em 3100 e roda Playwright + axe
 node scripts/contraste.mjs   # obrigatório ao mexer em cor
 ```
 
-`npm run test` roda os dois conjuntos de teste em sequência.
 
 ## Onde estão as coisas
 
