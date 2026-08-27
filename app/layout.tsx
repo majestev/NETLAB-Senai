@@ -35,6 +35,9 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   applicationName: SITE.name,
+  authors: [{ name: SITE.author.name, url: SITE.author.github }],
+  creator: SITE.author.name,
+  publisher: SITE.author.name,
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -51,6 +54,10 @@ export const metadata: Metadata = {
         alt: `${SITE.name} — ${SITE.title}`,
       },
     ],
+  },
+  other: {
+    author: SITE.author.name,
+    "github:profile": SITE.author.github,
   },
   twitter: {
     card: "summary_large_image",
