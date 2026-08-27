@@ -16,4 +16,9 @@ export const SITE = {
     "Plataforma de estudo de redes de computadores: roteamento IP, comutação, VLANs e redes sem fio, com visualizações interativas, simuladores e laboratórios práticos.",
   url: resolverUrl(),
   locale: "pt-BR",
+  author: {
+    name: "Bernardo Capellini",
+    github: "https://github.com/majestev",
+    githubLabel: "github.com/majestev",
+  },
 } as const;
