@@ -20,6 +20,7 @@ import {
   prefetchCommandPalette,
 } from "./command-palette-lazy";
 import { useProgress } from "@/components/progress-provider";
+import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const NAV = [
@@ -111,6 +112,16 @@ export function SiteHeader() {
           </Sheet>
 
           <Wordmark className="mr-1 shrink-0" />
+
+          <a
+            href={SITE.author.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden shrink-0 border-l border-rail py-1 pl-3 pr-1 text-sm text-muted-foreground transition-colors hover:text-foreground xl:block"
+            title={`${SITE.author.name} no GitHub`}
+          >
+            {SITE.author.name}
+          </a>
 
           <nav aria-label="Principal" className="hidden lg:block">
             <ul className="flex items-center">

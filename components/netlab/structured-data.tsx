@@ -103,6 +103,11 @@ export function WebSiteJsonLd() {
         description: SITE.description,
         url: SITE.url,
         inLanguage: "pt-BR",
+        author: {
+          "@type": "Person",
+          name: SITE.author.name,
+          url: SITE.author.github,
+        },
         potentialAction: {
           "@type": "SearchAction",
           target: {

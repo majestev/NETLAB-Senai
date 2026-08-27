@@ -16,6 +16,25 @@ export function SiteFooter({ compacto = false }: { compacto?: boolean }) {
         <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-x-6 gap-y-3 px-4 sm:px-6">
           <Wordmark />
           <p className="text-sm text-muted-foreground">{SITE.subtitle}</p>
+          <p className="text-sm text-muted-foreground">
+            por{" "}
+            <a
+              href={SITE.author.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-rail-strong underline-offset-4 transition-colors hover:decoration-copper"
+            >
+              {SITE.author.name}
+            </a>
+          </p>
+          <a
+            href={SITE.author.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {SITE.author.githubLabel}
+          </a>
           <nav aria-label="Complementar" className="ml-auto">
             <ul className="flex flex-wrap items-center gap-x-5">
               {EXTRAS.map((item) => (
@@ -42,6 +61,17 @@ export function SiteFooter({ compacto = false }: { compacto?: boolean }) {
           <Wordmark />
           <p className="mt-3 max-w-xs text-sm text-muted-foreground">
             {SITE.title} — {SITE.subtitle}.
+          </p>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Desenvolvido por{" "}
+            <a
+              href={SITE.author.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-rail-strong underline-offset-4 transition-colors hover:decoration-copper"
+            >
+              {SITE.author.name}
+            </a>
           </p>
         </div>
 
@@ -92,6 +122,20 @@ export function SiteFooter({ compacto = false }: { compacto?: boolean }) {
             ))}
           </ul>
         </nav>
+      </div>
+
+      <div className="mx-auto mt-8 flex max-w-[1600px] flex-wrap items-center gap-x-4 gap-y-2 border-t border-rail px-4 pt-6 sm:px-6">
+        <p className="text-sm text-muted-foreground">
+          © {new Date().getFullYear()} {SITE.author.name}
+        </p>
+        <a
+          href={SITE.author.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+        >
+          {SITE.author.githubLabel}
+        </a>
       </div>
     </footer>
   );
